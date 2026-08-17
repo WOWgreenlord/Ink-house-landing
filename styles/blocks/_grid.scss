@@ -1,0 +1,24 @@
+@use '../helpers/media' as *;
+
+.grid {
+  --gridColumns: 1;
+  
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(var(--gridColumns), 1fr);
+
+  @for $i from 2 through 12 {
+    &--#{$i} {
+      --gridColumns: #{$i};
+    }
+  }
+
+  @include desktop {
+    --gridColumns: 2;
+  }
+
+  @include mobile {
+    --gridColumns: 1;
+  }
+
+}

@@ -1,0 +1,16 @@
+@use "../helpers/media" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.mobile-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @include mobile {
+      position: absolute;
+      top: 63%;
+      padding-inline: 15px;
+    }
+  }

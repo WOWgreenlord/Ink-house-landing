@@ -1,0 +1,36 @@
+@use "../helpers/media" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.burger-button {
+  @include reset-button;
+  @include square(30px);
+
+  position: relative;
+  border-radius: var(--border-radius-small);
+
+  @include hover {
+    &::after {
+      color: var(--color-accent);
+      background-color: var(--color-accent);
+    }
+  }
+
+  &:focus {
+    background-color: var(--color-focus-text-button);
+  }
+
+  &::after {
+    @include abs-center;
+
+    content: "";
+    width: 21px;
+    height: 2px;
+    color: var(--color-burger-button);
+    background-color: var(--color-burger-button);
+    border-radius: 5px;
+    box-shadow:
+      0 -8px,
+      0 8px;
+  }
+}

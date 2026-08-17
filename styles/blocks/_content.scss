@@ -1,0 +1,9 @@
+@use "../helpers/media" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--section-padding-y);
+}

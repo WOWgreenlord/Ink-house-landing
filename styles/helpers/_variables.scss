@@ -1,0 +1,44 @@
+@use 'media' as *;
+
+:root {
+  --color-dark: #2C2D35;
+  --color-light: #ffffff;
+  --color-accent: #598D66;
+  --color-gray: #86928B;
+  --color-background: #E1EDE6;
+  
+  --color-burger-button: #4C5866;
+
+  --color-hover-text-primary-button: #F4F6F5;
+  --color-focus-primary-button: #D4E8D9;
+  --color-active-primary-button: #376B44; 
+
+  --color-focus-text-button: #D4E8D9;
+  --color-active-text-button: #376B44;
+
+  --color-bg-tab-button: #D4E8D9;
+  --color-hover-text-tab-button: #F4F6F5;
+  --color-active-tab-button: #376B44;
+
+  --border: 1px solid #C3D1C6;
+  --border-radius-half: 9999px;
+
+  --font-family-base: "Raleway", sans-serif;
+
+  --container-width: 1110px;
+  --container-padding-x: 20px;
+
+  --section-padding-y: 70px;
+
+  --button-height: 65px;
+
+  --transition-duration: 0.2s;
+
+  @include desktop {
+    --section-padding-y: 50px;
+  }
+
+  @include mobile {
+    --section-padding-y: 60px;
+  }
+}

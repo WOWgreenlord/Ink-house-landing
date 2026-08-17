@@ -1,0 +1,29 @@
+@use "../helpers/media" as *;
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: initial;
+      row-gap: 20px;
+    }
+  }
+
+  &__tabs-list {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    @include tablet {
+      overflow: hidden;
+    }
+  }
+}

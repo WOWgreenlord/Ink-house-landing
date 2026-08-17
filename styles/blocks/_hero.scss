@@ -1,0 +1,75 @@
+@use "../helpers/media" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.hero {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+
+  @include tablet {
+    margin-top: 50px;
+  }
+
+  @media (max-width: 900px) {
+    margin-top: 30px;
+  }
+
+  // #ACC3C7
+
+  &__image {
+    max-width: 540px;
+    max-height: 620px;
+    @include desktop-second {
+      // width: 95%;
+      max-width: 330px;
+      max-height: 380px;
+    }
+
+    @include tablet {
+      max-width: 195px;
+      max-height: 239px;
+      // max-width: 330px;
+      // max-height: 380px;
+    }
+
+    // @include mobile {
+    //   max-width: 195px;
+    //   max-height: 239px;
+    // }
+  }
+
+  &__body {
+    @include tablet {
+      max-width: 330px;
+    }
+  }
+
+  &__title {
+    font-size: clamp(30px, 1.3393rem + 2.6786vw, 60px);
+
+    &-color-accent {
+      color: var(--color-accent);
+    }
+  }
+
+  &__description {
+    color: var(--color-gray);
+    margin-bottom: 60px;
+    margin-top: 20px;
+    font-size: clamp(14px, 0.6588rem + 1.0811vw, 18px);
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-block: 10px;
+    }
+
+    @include mobile-s {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+  }
+}

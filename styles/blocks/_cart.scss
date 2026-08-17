@@ -1,0 +1,24 @@
+@use "../helpers/media" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.cart-link {
+  @include reset-button;
+
+  display: flex;
+  align-items: center;
+
+  @include hover {
+    color: var(--color-accent);
+  }
+
+  &:focus {
+    background-color: var(--color-focus-text-button);
+    color: var(--color-accent);
+  }
+
+  &:active {
+    color: var(--color-active-text-button);
+  }
+
+}

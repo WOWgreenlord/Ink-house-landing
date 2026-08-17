@@ -1,0 +1,100 @@
+@use "../helpers/media" as *;
+@use "../helpers/mixins" as *;
+
+.header {
+  --header-height: 100px;
+
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--color-background);
+
+  @include tablet {
+    --header-height: 123px;
+  }
+
+  &__logo {
+    @include tablet {
+      height: 50%;
+    }
+
+    @include mobile {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-color: var(--color-light);
+
+      img {
+        margin-inline: auto;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 60px;
+    align-items: center;
+    height: 100%;
+
+    @include tablet {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    @include mobile {
+      position: relative;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    @include tablet {
+      width: 100%;
+      flex: 1;
+      margin-left: 0;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 60px;
+
+      @include tablet {
+        flex: 1;
+        column-gap: clamp(60px, 13vw, 90px);
+      }
+    }
+
+    &-item {
+      @include fluid-text(20, 18);
+
+      @include hover {
+        color: var(--color-accent);
+      }
+
+      &--last-child {
+        @include tablet {
+          margin-left: auto;
+        }
+      }
+
+      text-wrap: nowrap;
+
+      @include desktop {
+        font-size: 18px;
+      }
+
+      :focus {
+        background-color: var(--color-focus-text-button);
+        padding-inline: 5px;
+      }
+
+      :active {
+        color: var(--color-active-text-button);
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@use "../helpers/media" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.line {
+  width: 100%;
+  // height: 1px;
+  background-color: #C3D1C6;
+  color: #C3D1C6;
+
+  @include tablet-above {
+    display: none;
+  }
+
+}

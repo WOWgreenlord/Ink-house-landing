@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="ie=edge"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/styles.css"
+    />
+    <title>Ink. House</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__body container">
+        <a
+          href="/"
+          class="header__logo"
+        >
+          <img
+            src="/images/logo.svg"
+            alt=""
+            width="143"
+            height="35"
+            loading="lazy"
+          />
+        </a>
+        <hr class="header__divide-line line hidden-mobile" size="1"/>
+        <nav class="header__menu hidden-mobile">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a
+                href="#"
+                class="header__menu-link"
+                >Репродукции</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a
+                href="/"
+                class="header__menu-link"
+                >Новинки</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a
+                href="/"
+                class="header__menu-link"
+                >О нас</a
+              >
+            </li>
+            <li class="header__menu-item header__menu-item--last-child">
+              <a
+                href="/"
+                class="header__menu-link cart-link"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_3_996)">
+                    <path
+                      d="M9.25001 21.1667C9.75627 21.1667 10.1667 20.7563 10.1667 20.25C10.1667 19.7438 9.75627 19.3334 9.25001 19.3334C8.74375 19.3334 8.33334 19.7438 8.33334 20.25C8.33334 20.7563 8.74375 21.1667 9.25001 21.1667Z"
+                      stroke="#2C2D35"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M19.3333 21.1667C19.8396 21.1667 20.25 20.7563 20.25 20.25C20.25 19.7438 19.8396 19.3334 19.3333 19.3334C18.8271 19.3334 18.4167 19.7438 18.4167 20.25C18.4167 20.7563 18.8271 21.1667 19.3333 21.1667Z"
+                      stroke="#2C2D35"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M1.91666 1.91663H5.58332L8.03999 14.1908C8.12381 14.6128 8.35341 14.9919 8.68857 15.2617C9.02374 15.5315 9.44313 15.6749 9.87332 15.6666H18.7833C19.2135 15.6749 19.6329 15.5315 19.9681 15.2617C20.3032 14.9919 20.5328 14.6128 20.6167 14.1908L22.0833 6.49996H6.49999"
+                      stroke="#2C2D35"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_3_996">
+                      <rect
+                        width="22"
+                        height="22"
+                        fill="white"
+                        transform="translate(1 1)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div
+          class="header__mobile-buttons-container mobile-buttons visible-mobile"
+        >
+          <button
+            class="header__burger-button button__burger-menu burger-button"
+            type="button"
+            onclick="mobileOverlay.showModal()"
+          >
+            <span class="visually-hidden">Open navigation menu</span>
+          </button>
+          <a
+            href="/"
+            class="header__mobile-buttons-container-cart-link cart-link"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_3_996)">
+                <path
+                  d="M9.25001 21.1667C9.75627 21.1667 10.1667 20.7563 10.1667 20.25C10.1667 19.7438 9.75627 19.3334 9.25001 19.3334C8.74375 19.3334 8.33334 19.7438 8.33334 20.25C8.33334 20.7563 8.74375 21.1667 9.25001 21.1667Z"
+                  stroke="#2C2D35"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M19.3333 21.1667C19.8396 21.1667 20.25 20.7563 20.25 20.25C20.25 19.7438 19.8396 19.3334 19.3333 19.3334C18.8271 19.3334 18.4167 19.7438 18.4167 20.25C18.4167 20.7563 18.8271 21.1667 19.3333 21.1667Z"
+                  stroke="#2C2D35"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M1.91666 1.91663H5.58332L8.03999 14.1908C8.12381 14.6128 8.35341 14.9919 8.68857 15.2617C9.02374 15.5315 9.44313 15.6749 9.87332 15.6666H18.7833C19.2135 15.6749 19.6329 15.5315 19.9681 15.2617C20.3032 14.9919 20.5328 14.6128 20.6167 14.1908L22.0833 6.49996H6.49999"
+                  stroke="#2C2D35"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_3_996">
+                  <rect
+                    width="22"
+                    height="22"
+                    fill="white"
+                    transform="translate(1 1)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="section container">
+        <div class="section__body">
+          <div class="hero">
+            <picture>
+              <source
+                srcset="./images/hero/hero-bird-mobile.avif"
+                media="(max-width: 510px)"
+                type="image/avif"
+              />
+              <source
+                srcset="./images/hero/hero-bird-mobile.webp"
+                media="(max-width: 510px)"
+                type="image/webp"
+              />
+              <source
+                srcset="./images/hero/hero-bird-mobile.jpg"
+                media="(max-width: 510px)"
+              />
+
+              <source
+                srcset="./images/hero/hero-bird-tablet.avif"
+                media="(max-width: 1000px)"
+                type="image/avif"
+              />
+              <source
+                srcset="./images/hero/hero-bird-tablet.webp"
+                media="(max-width: 1000px)"
+              />
+              <source
+                srcset="./images/hero/hero-bird-tablet.jpg"
+                media="(max-width: 1000px)"
+              />
+
+              <source
+                srcset="./images/hero/hero-bird.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="./images/hero/hero-bird.webp"
+                type="image/webp"
+              />
+
+              <img
+                src="./images/hero/hero-bird.jpg"
+                alt="Птица на ветке"
+                class="hero__image hidden-mobile"
+                width="540"
+                height="621"
+                loading="lazy"
+              />
+            </picture>
+            <div class="hero__body">
+              <h1 class="hero__title">
+                Реплики картин от
+                <span class="hero__title-color-accent">Ink. House</span>
+              </h1>
+              <div class="hero__description">
+                <p>
+                  Высокое качество отрисовки на плотной бумаге или льняном
+                  холсте. Редкие произведения, доступные цены.
+                </p>
+              </div>
+              <button class="hero__button button button--primary-button">
+                Продукция
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section container">
+        <div class="section__body">
+          <div class="catalog">
+            <div class="catalog__body">
+              <h2 class="catalog__title">Репродукции</h2>
+              <ul class="catalog__tabs-list">
+                <li class="catalog__tabs-item">
+                  <button class="catalog__tabs-button button button--tab">
+                    Франция
+                  </button>
+                </li>
+                <li class="catalog__tabs-item">
+                  <button class="catalog__tabs-button button button--tab">
+                    Германия
+                  </button>
+                </li>
+                <li class="catalog__tabs-item">
+                  <button class="catalog__tabs-button button button--tab">
+                    Англия
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <ul class="catalog__product-list grid grid--3">
+              <li class="catalog__product-item">
+                <div class="product">
+                  <img
+                    src="./images/catalog/1/1.jpg"
+                    alt="Картина 'Охота Амура'"
+                    width="310"
+                    height="422"
+                    class="product__image"
+                    loading="lazy"
+                  />
+                  <span class="product__author">Марсель Руссо</span>
+                  <h3 class="product__title">Охота Амура</h3>
+                  <div class="product__description">
+                    <p>Холст, масло (50х80)</p>
+                  </div>
+                  <span class="product__price">14 500 руб</span>
+                  <button
+                    type="button"
+                    class="product__button button button--primary-button"
+                  >
+                    В корзину
+                  </button>
+                </div>
+              </li>
+              <li class="catalog__product-item">
+                <div class="product">
+                  <img
+                    src="./images/catalog/2/2.jpg"
+                    alt="Картина 'Дама с собачкой'"
+                    width="310"
+                    height="422"
+                    class="product__image"
+                    loading="lazy"
+                  />
+                  <span class="product__author">Анри Селин</span>
+                  <h3 class="product__title">Дама с собачкой</h3>
+                  <div class="product__description">
+                    <p>Акрил, бумага (50х80)</p>
+                  </div>
+                  <span class="product__price">16 500 руб</span>
+                  <button
+                    type="button"
+                    class="product__button button button--primary-button"
+                  >
+                    В корзину
+                  </button>
+                </div>
+              </li>
+              <li class="catalog__product-item">
+                <div class="product">
+                  <img
+                    src="./images/catalog/3/3.jpg"
+                    alt="Картина 'Процедура'"
+                    width="310"
+                    height="422"
+                    class="product__image"
+                    loading="lazy"
+                  />
+                  <span class="product__author">Франсуа Дюпон</span>
+                  <h3 class="product__title">Процедура</h3>
+                  <div class="product__description">
+                    <p>Цветная литография (40х60)</p>
+                  </div>
+                  <span class="product__price">20 000 руб</span>
+                  <button
+                    type="button"
+                    class="product__button button button--primary-button"
+                  >
+                    В корзину
+                  </button>
+                </div>
+              </li>
+              <li class="catalog__product-item">
+                <div class="product">
+                  <img
+                    src="./images/catalog/4/4.jpg"
+                    alt="Картина 'Роза'"
+                    width="310"
+                    height="422"
+                    class="product__image"
+                    loading="lazy"
+                  />
+                  <span class="product__author">Луи Детуш</span>
+                  <h3 class="product__title">Роза</h3>
+                  <div class="product__description">
+                    <p>Бумага, акрил (50х80)</p>
+                  </div>
+                  <span class="product__price">12 000 руб</span>
+                  <button
+                    type="button"
+                    class="product__button button button--primary-button"
+                  >
+                    В корзину
+                  </button>
+                </div>
+              </li>
+              <li class="catalog__product-item">
+                <div class="product">
+                  <img
+                    src="./images/catalog/5/5.jpg"
+                    alt="Картина 'Птичья трапеза'"
+                    width="310"
+                    height="422"
+                    class="product__image"
+                    loading="lazy"
+                  />
+                  <span class="product__author">Франсуа Дюпон</span>
+                  <h3 class="product__title">Птичья трапеза</h3>
+                  <div class="product__description">
+                    <p>Цветная литография (40х60)</p>
+                  </div>
+                  <span class="product__price">22 500 руб</span>
+                  <button
+                    type="button"
+                    class="product__button button button--primary-button"
+                  >
+                    В корзину
+                  </button>
+                </div>
+              </li>
+              <li class="catalog__product-item">
+                <div class="product">
+                  <img
+                    src="./images/catalog/6/6.jpg"
+                    alt="Картина 'Пейзаж с рыбой'"
+                    width="310"
+                    height="422"
+                    class="product__image"
+                    loading="lazy"
+                  />
+                  <span class="product__author">Пьер Моранж</span>
+                  <h3 class="product__title">Пейзаж с рыбой</h3>
+                  <div class="product__description">
+                    <p>Цветная литография (40х60)</p>
+                  </div>
+                  <span class="product__price">20 000 руб</span>
+                  <button
+                    type="button"
+                    class="product__button button button--primary-button"
+                  >
+                    В корзину
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
