@@ -1,0 +1,54 @@
+@use "../helpers/media" as *;
+@use "../helpers/mixins" as *;
+
+.team {
+  &__picture {
+    width: 100%;
+  }
+
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+
+  @include tablet {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  @include mobile {
+    row-gap: 30px;
+  }
+
+  &__image {
+    @include tablet {
+      width: 510px;
+      height: 504px;
+    }
+
+    @include mobile {
+      width: 375px;
+      height: 370px;
+    }
+
+    @include mobile-s {
+      width: 290px;
+      height: 286px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-self: self-end;
+    row-gap: 20px;
+  }
+
+  &__description {
+    @include fluid-text(18, 16);
+  }
+
+  &__people-list {
+    display: flex;
+    column-gap: 30px;
+  }
+}

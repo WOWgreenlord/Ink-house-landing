@@ -1,5 +1,8 @@
 @use './helpers/' as *;
 
+@use './blocks/cross-button';
+@use './blocks/mobile-overlay';
+@use './blocks/section';
 @use './blocks/cart';
 @use './blocks/grid';
 @use './blocks/button';
@@ -11,3 +14,6 @@
 @use './blocks/hero';
 @use './blocks/catalog';
 @use './blocks/product';
+@use './blocks/promo';
+@use './blocks/team';
+@use './blocks/footer';

@@ -1,0 +1,49 @@
+@use '../helpers/media' as *;
+
+.promo {
+  padding-block: 70px;
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  &__icon {
+    color: #EEDB6D;
+
+    @include tablet {
+      width: 60px;
+      aspect-ratio: 1;
+    }
+
+    @include tablet {
+      max-width: 50px;
+      width: 100%;
+    }
+  }
+  &__title {
+    color: var(--color-title-promo);
+    max-width: 525px;
+
+    @include tablet {
+      max-width: 300px;
+    }
+  }
+
+  &__description {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    color: var(--color-light);
+    max-width: 540px;
+
+    @include tablet {
+      margin-block: 30px;
+      font-size: 18px;
+    }
+
+    @include mobile {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  }
+}

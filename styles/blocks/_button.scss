@@ -66,4 +66,42 @@
       color: var(--color-hover-text-tab-button);
     }
   }
+
+  &--promo {
+    --color-promo-bg: #EEDB6D;
+    --color-promo-border: #A38314;
+    --color-promo-hover: #FAEB97;
+    --color-promo-active: #D9B949;
+
+    background-color: var(--color-promo-bg);
+    color: var(--color-dark);
+    border: 1px solid transparent;
+    padding: 20px 60px;
+    max-width: 225px;
+    max-height: 65px;
+    font-size: clamp(18px, 1.0893rem + 0.1786vw, 20px);
+    text-wrap: nowrap;
+
+    @include hover {
+      background-color: var(--color-promo-hover);
+    }
+
+    &:focus {
+      border-color: var(--color-promo-border);
+    }
+
+    &:active {
+      background-color: var(--color-promo-active);
+    }
+
+    @include tablet {
+      max-width: 178px;
+      max-height: 50px;
+    }
+
+    @include mobile-s {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
 }

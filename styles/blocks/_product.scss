@@ -1,6 +1,5 @@
-@use '../helpers/mixins' as *;
-@use '../helpers/media' as *;
-
+@use "../helpers/mixins" as *;
+@use "../helpers/media" as *;
 
 .product {
   padding-inline: 20px;
@@ -10,7 +9,12 @@
 
   width: 100%;
   max-width: 350px;
-  // max-height: 730px;
+  height: 100%;
+
+  @include mobile {
+    max-width: 100%;
+    row-gap: 5px;
+  }
 
   @include tablet {
     max-width: 240px;
@@ -37,9 +41,14 @@
     color: var(--color-accent);
     font-size: clamp(20px, 1.1786rem + 0.3571vw, 24px);
     padding-block: 20px;
+
+    @include mobile {
+      padding-block: 10px;
+    }
   }
 
   &__button {
     max-width: 100%;
   }
+
 }

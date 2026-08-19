@@ -13,7 +13,7 @@
     }
   }
 
-  @include desktop {
+  @include tablet-865 {
     --gridColumns: 2;
   }
 
